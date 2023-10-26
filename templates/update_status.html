@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Обновление статуса задачи</title>
+</head>
+<body>
+    <h1>Обновление статуса для задачи: {{ task.title }}</h1>
+
+    <form method="POST" action="{% url 'update_status' task.id %}">
+        {% csrf_token %}
+        <label for="status">Статус:</label>
+        <select name="status" id="status">
+            <option value="В ожидании">В ожидании</option>
+            <option value="В процессе">В процессе</option>
+            <option value="Завершено">Завершено</option>
+        </select>
+
+
+        <input type="submit" value="Обновить статус">
+    </form>
+</body>
+</html>

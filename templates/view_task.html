@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Просмотр задачи</title>
+</head>
+<body>
+    <h1>Задача: {{ task.title }}</h1>
+    <p>Описание: {{ task.description }}</p>
+    <p>Исполнитель: {{ task.executor.username }}</p>
+    <p>Статус: {{ task.status }}</p>
+    <p>Дата создания: {{ task.created_date }}</p>
+    <p>Дата выполнения: {{ task.completion_date }}</p>
+</body>
+</html>
